@@ -1,0 +1,14 @@
+
+zaboutme.group_xml_site_map:
+  path: '/group/{group}/googlesitemap'
+  defaults:
+    _controller: '\Drupal\zaboutme\Controller\GroupXmlSiteMap::getSitemap'
+  requirements:
+    _permission: 'access content'
+zaboutme.sitemap:
+  path: '/group/{group_name}/sitemap'
+  defaults:
+    _controller: '\Drupal\zaboutme\Controller\ZaboutmeSitemapController::buildPage'
+    _title: 'Site map'
+  requirements:
+    _permission: 'access content'

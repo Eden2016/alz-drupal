@@ -1,0 +1,72 @@
+
+#sidenav {
+  float: left;
+  background-color: $dark;
+  height: 100%;
+  width: 250px;
+  color: $font-light;
+  
+  a {
+    color: $font-light;
+    font-weight: 300;
+    
+    &:hover {
+      background-color: transparent;
+      color: $font-light;
+    }
+  }
+  
+  ul.menu {
+    text-transform: uppercase;
+    width: 100%;
+    
+    li {
+      float: none;
+      display: block;
+      
+      > a, > span {
+        display: block;
+        padding: 20px 15px;
+        border-bottom: solid 1px lighten($dark, 10%);
+      }
+      
+      > span {
+        margin-top: 30px;
+        font-family: $font-oswald;
+      }
+      
+      &:first-child > span {
+        margin-top: 0;
+      }
+    }
+    
+    .open > a, 
+    .open > a:hover, 
+    .open > a:focus {
+      background-color: $dark;
+      color: $font-light;
+    }
+    
+    .dropdown-menu {
+      top: 0;
+      left: 230px;
+      background-color: $dark
+    }
+  }
+  
+  .view-display-id-profile {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    
+    img {
+      display: inline-block !important;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#page-content-wrapper {
+  float: left;
+  width: calc(100% - 250px);
+}

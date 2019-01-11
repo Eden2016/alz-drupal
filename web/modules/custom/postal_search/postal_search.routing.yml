@@ -1,0 +1,7 @@
+/postal_search.search:
+  path: '/postal-search/search/{postal}'
+  defaults:
+    _controller: '\Drupal\postal_search\Controller\PostalSearchController::search'
+    _title: 'Postal Search Result'
+  requirements:
+    _permission: 'access content'

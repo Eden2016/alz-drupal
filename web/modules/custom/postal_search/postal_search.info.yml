@@ -1,0 +1,14 @@
+name: 'Postal Search'
+description: 'Api endpoint that takes a postal code, converts in to a geolocation and then returns the closest chapter title and link'
+package: 'Custom'
+
+core: 8.x
+type: module
+
+dependencies:
+  - geolocation:geolocation
+  - geocoder:geocoder
+
+configure: postal_search.settings
+
+php: 7

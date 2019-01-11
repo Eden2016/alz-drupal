@@ -1,0 +1,8 @@
+name: Zaboutme
+description: Module to setup the core Zaboutme features
+core: 8.x
+type: module
+package: Zaboutme
+
+dependencies:
+  - sitemap:sitemap

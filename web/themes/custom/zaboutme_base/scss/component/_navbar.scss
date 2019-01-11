@@ -1,0 +1,113 @@
+/**
+ * Navbar styling.
+ */
+
+
+body {
+  // Fix horizontal scrolling on iOS devices.
+  // http://drupal.org/node/1870076
+  position: relative;
+
+  &.navbar-is-static-top {
+    margin-top: 0;
+  }
+  &.navbar-is-fixed-top {
+    margin-top: ($navbar-height + ($grid-gutter-width / 2));
+  }
+  &.navbar-is-fixed-bottom {
+    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+  }
+
+  @media #{$tablet} {
+    margin-top: ($grid-gutter-width / 2);
+  }
+  @media #{$mobile} {
+    &.toolbar-vertical {
+      &.navbar-is-fixed-top,
+      &.navbar-is-fixed-bottom {
+        .toolbar-bar {
+          position: fixed;
+        }
+        header {
+          z-index: 500;
+        }
+      }
+      // Default toolbar fixed height value.
+      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+      &.navbar-is-fixed-top header {
+        top: 39px;
+      }
+    }
+  }
+}
+.navbar.container {
+  width: 100%;
+  margin: 0 0 $navbar-margin-bottom 0;
+  background: none;
+  border-width: 0;
+  padding: 0;
+}
+
+.navbar  {
+  font-family: $font-oswald;
+  
+  .region {
+    @include clearfix;
+    margin: 0 20px;
+    //margin-left: auto !important;
+    //margin-right: auto !important;
+
+    /*
+    @media #{$tablet} {
+      max-width: (($container-sm - $grid-gutter-width));
+    }
+    @media #{$normal} {
+      max-width: (($container-md - $grid-gutter-width));
+    }
+    @media #{$wide} {
+      max-width: (($container-lg - $grid-gutter-width));
+    }
+    */
+  }
+  
+  #navbar-collapse {
+    background-color: $dark;
+    text-transform: uppercase;
+  
+  
+    .navbar-nav > li > a {
+      color: white;
+
+      &:hover {
+        color: $font-light;
+      }
+    }
+
+    .navbar-nav .active a, .navbar-nav > li.open > a {
+      color: $dark;
+      
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}
+
+// Branding.
+.navbar .logo {
+  margin-right: -($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  @media #{$grid-breakpoint} {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+.navbar-header {
+  @media (min-width: $grid-float-breakpoint) {
+    float: none;
+  }
+}
+
+

@@ -1,0 +1,96 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function alzheimer_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  $group = \Drupal::routeMatch()->getParameter('group');
+  
+  if (empty($group))
+  {
+    $node = $form_state->getFormObject()->getEntity();
+    if ($node && !$node->isNew())
+    {
+      $group = \Drupal::entityTypeManager()->getStorage('group_content')->loadByEntity($node);
+      if (!empty($group))
+      {
+        $group = reset($group);
+        $group = $group->getGroup();
+      }
+    }
+  }
+
+  if ($group)
+  {
+    $menu_parent_selector = \Drupal::service('menu.parent_form_selector');
+    $options_cacheability = new \Drupal\Core\Cache\CacheableMetadata();
+    //$form['menu']['enabled']['#value'] = TRUE;
+    //$form['menu']['enabled']['#type'] = 'value';
+    $form['menu']['link']['title']['#required'] = TRUE;
+    $form['menu']['link']['menu_parent']['#required'] = TRUE;
+    $form['menu']['link']['menu_parent']['#options'] = $menu_parent_selector->getParentSelectOptions('',[$group->label() => t('Top Level')], $options_cacheability);
+    
+    //since we are loading menus dynamically we need to get the nodes menu item and setup the menu values manually
+    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+    $result = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $form_state->getFormObject()->getEntity()->id()));
+    if (!empty($result))
+    {
+      $link = reset($result);
+      $def = $link->getPluginDefinition();
+      $form['menu']['#open'] = TRUE;
+      $form['menu']['enabled']['#default_value'] = TRUE;
+      $form['menu']['link']['id']['#value'] = $link->getPluginId();
+      $form['menu']['link']['entity_id']['#value'] = $def['metadata']['entity_id'];
+      $form['menu']['link']['title']['#default_value'] = $link->getTitle();
+      $form['menu']['link']['menu_parent']['#default_value'] = $link->getMenuName() . ':' . $link->getParent(); 
+      $form['menu']['link']['weight']['#default_value'] = $link->getWeight(); 
+    }
+  }
+}
+
+function alzheimer_preprocess_menu(&$variables, $hook) {
+	if ($hook == 'menu') {
+		alzheimer_menu_active_item($variables['items']);
+	}
+}
+
+function alzheimer_menu_active_item(&$items) {
+	$current_path = \Drupal::request()->getRequestUri();
+	foreach ($items as $key => $item) {
+		if ($item['url']->toString() == $current_path) {
+      $link_options = array(
+        'attributes' => array(
+          'class' => array(
+            'active',
+          ),
+        ),
+      );
+      $items[$key]['url']->setOptions($link_options);
+		}
+		if (!empty($items[$key]['below'])) {
+			alzheimer_menu_active_item($items[$key]['below']);
+		}
+	}
+}
+
+function alzheimer_preprocess_breadcrumb(&$variables) {
+ if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']){
+    if ($node->hasField('field_breadcrumb_title')) {
+      $last = end($variables['breadcrumb']);
+      $last_key = key($variables['breadcrumb']);
+      unset($variables['breadcrumb'][$last_key]);
+      $variables['breadcrumb'][] = array(
+        'text' => $node->get('field_breadcrumb_title')->value
+      );
+    }
+  }
+}

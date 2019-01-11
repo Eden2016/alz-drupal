@@ -1,0 +1,382 @@
+# Alzheimer redirects
+Redirect 302 /bc /en/bc
+Redirect 302 /bc-legacy /en/bc
+Redirect 302 /ab /en/ab
+Redirect 302 /federationquebecoise /en/federationquebecoise
+Redirect 302 /mb https://alzheimer.mb.ca
+Redirect 302 /nb /en/nb
+Redirect 302 /nl /en/nl
+Redirect 302 /ns /en/ns
+Redirect 302 /on /en/on
+Redirect 302 /pei /en/pei
+Redirect 302 /sk /en/sk
+#Redirect 302 /Home /en
+#Redirect 302 /en/Home /en
+
+#### Ontario Chapters ####
+# algoma
+RedirectMatch 302 ^(\/algoma|(\/en)?(\/on)?\/chapters-on\/algoma)\/?(.*)$ /en/algoma/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/algoma\/?(.*)$ /fr/algoma/$2
+# bhq
+RedirectMatch 302 ^(\/bhq|(\/en)?(\/on)?\/chapters-on\/bhq)\/?(.*)$ /en/bhq/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/bhq\/?(.*)$ /fr/bhq/$2
+# chathamkent
+RedirectMatch 302 ^(\/chathamkent|(\/en)?(\/on)?\/chapters-on\/chathamkent)\/?(.*)$ /en/chathamkent/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/chathamkent\/?(.*)$ /fr/chathamkent/$2
+# cornwall
+RedirectMatch 302 ^(\/cornwall|(\/en)?(\/on)?\/chapters-on\/cornwall)\/?(.*)$ /en/cornwall/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/cornwall\/?(.*)$ /fr/cornwall/$2
+# dufferincounty
+RedirectMatch 302 ^(\/dufferincounty|(\/en)?(\/on)?\/chapters-on\/dufferincounty)\/?(.*)$ /en/dufferincounty/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/dufferincounty\/?(.*)$ /fr/dufferincounty/$2
+# durham
+RedirectMatch 302 ^(\/durham|(\/en)?(\/on)?\/chapters-on\/durham)\/?(.*)$ /en/durham/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/durham\/?(.*)$ /fr/durham/$2
+# elgin
+RedirectMatch 302 ^(\/elgin|(\/en)?(\/on)?\/chapters-on\/elgin)\/?(.*)$ /en/elgin/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/elgin\/?(.*)$ /fr/elgin/$2
+# greybruce
+RedirectMatch 302 ^(\/greybruce|(\/en)?(\/on)?\/chapters-on\/greybruce)\/?(.*)$ /en/greybruce/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/greybruce\/?(.*)$ /fr/greybruce/$2
+# simcoecounty
+RedirectMatch 302 ^(\/simcoecounty|\/gsc|(\/en)?(\/on)?\/chapters-on\/simcoecounty|(\/en)?(\/on)?\/chapters-on\/gsc)\/?(.*)$ /en/simcoecounty/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/simcoecounty\/?(.*)$ /fr/simcoecounty/$2
+# huroncounty
+RedirectMatch 302 ^(\/huroncounty|(\/en)?(\/on)?\/chapters-on\/huroncounty)\/?(.*)$ /en/huroncounty/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/huroncounty\/?(.*)$ /fr/huroncounty/$2
+# kfla
+RedirectMatch 302 ^(\/kfla|(\/en)?(\/on)?\/chapters-on\/kfla)\/?(.*)$ /en/kfla/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/kfla\/?(.*)$ /fr/kfla/$2
+# krr
+RedirectMatch 302 ^(\/krr|(\/en)?(\/on)?\/chapters-on\/krr)\/?(.*)$ /en/krr/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/krr\/?(.*)$ /fr/krr/$2
+# lanark
+RedirectMatch 302 ^(\/lanark|(\/en)?(\/on)?\/chapters-on\/lanark)\/?(.*)$ /en/lanark/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/lanark\/?(.*)$ /fr/lanark/$2
+# muskoka
+RedirectMatch 302 ^(\/muskoka|(\/en)?(\/on)?\/chapters-on\/muskoka)\/?(.*)$ /en/muskoka/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/muskoka\/?(.*)$ /fr/muskoka/$2
+# niagara
+RedirectMatch 302 ^(\/niagara|(\/en)?(\/on)?\/chapters-on\/niagara)\/?(.*)$ /en/niagara/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/niagara\/?(.*)$ /fr/niagara/$2
+# northbay
+RedirectMatch 302 ^(\/northbay|(\/en)?(\/on)?\/chapters-on\/northbay)\/?(.*)$ /en/northbay/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/northbay\/?(.*)$ /fr/northbay/$2
+#ottawaandrenfrewcounty
+RedirectMatch 302 ^(\/ottawaandrenfrewcounty|(\/en)?(\/on)?\/chapters-on\/ottawaandrenfrewcounty)\/?(.*)$ /en/on/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/ottawaandrenfrewcounty\/?(.*)$ /fr/ottawaandrenfrewcounty/$2
+# oxford
+RedirectMatch 302 ^(\/oxford|(\/en)?(\/on)?\/chapters-on\/oxford)\/?(.*)$ /en/oxford/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/oxford\/?(.*)$ /fr/oxford/$2
+# peel
+RedirectMatch 302 ^(\/peel|(\/en)?(\/on)?\/chapters-on\/peel)\/?(.*)$ /en/peel/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/peel\/?(.*)$ /fr/peel/$2
+# perth
+RedirectMatch 302 ^(\/perth|(\/en)?(\/on)?\/chapters-on\/perth)\/?(.*)$ /en/perth/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/perth\/?(.*)$ /fr/perth/$2
+# pklnh
+RedirectMatch 302 ^(\/pklnh|(\/en)?(\/on)?\/chapters-on\/pklnh)\/?(.*)$ /en/pklnh/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/pklnh\/?(.*)$ /fr/pklnh/$2
+# sarnialambton
+RedirectMatch 302 ^(\/sarnialambton|(\/en)?(\/on)?\/chapters-on\/sarnialambton)\/?(.*)$ /en/sarnialambton/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/sarnialambton\/?(.*)$ /fr/sarnialambton/$2
+# sudburymanitoulin
+RedirectMatch 302 ^(\/sudburymanitoulin|(\/en)?(\/on)?\/chapters-on\/sudburymanitoulin)\/?(.*)$ /en/sudburymanitoulin/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/sudburymanitoulin\/?(.*)$ /fr/sudburymanitoulin/$2
+# thunderbay
+RedirectMatch 302 ^(\/thunderbay|(\/en)?(\/on)?\/chapters-on\/thunderbay)\/?(.*)$ /en/thunderbay/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/thunderbay\/?(.*)$ /fr/thunderbay/$2
+# timmins
+RedirectMatch 302 ^(\/timmins|(\/en)?(\/on)?\/chapters-on\/oxford)\/?(.*)$ /en/timmins/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/timmins\/?(.*)$ /fr/timmins/$2
+# windsoressex
+RedirectMatch 302 ^(\/windsoressex|(\/en)?(\/on)?\/chapters-on\/windsoressex)\/?(.*)$ /en/windsoressex/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/windsoressex\/?(.*)$ /fr/windsoressex/$2
+# ww
+RedirectMatch 302 ^(\/ww|(\/en)?(\/on)?\/chapters-on\/ww)\/?(.*)$ /en/ww/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/ww\/?(.*)$ /fr/ww/$2
+# york
+RedirectMatch 302 ^(\/york|(\/en)?(\/on)?\/chapters-on\/york)\/?(.*)$ /en/york/$4
+RedirectMatch 302 ^\/fr(\/on)?\/chapters-on\/york\/?(.*)$ /fr/york/$2
+
+#### Quebec Chapters ####
+Redirect 302 /estrie http://www.alzheimerestrie.com
+Redirect 302 /lanaudiere http://www.sadl.org
+Redirect 302 /laurentides http://www.alzheimerlaurentides.com
+Redirect 302 /laval http://www.alzheimerlaval.org
+Redirect 302 /maskoutainspatriotes http://www.alzheimermvp.com
+Redirect 302 /quebec http://www.societealzheimerdequebec.com
+
+#centreduquebec
+RedirectMatch 302 ^(\/centreduquebec|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/centreduquebec)\/?(.*)$ /fr/centreduquebec/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/centreduquebec\/?(.*)$ /en/centreduquebec/$2
+#cotenord
+RedirectMatch 302 ^(\/cotenord|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/cotenord)\/?(.*)$ /fr/cotenord/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/cotenord\/?(.*)$ /en/cotenord/$2
+#estrie
+RedirectMatch 302 ^(\/estrie|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/estrie)\/?(.*)$ /fr/estrie/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/estrie\/?(.*)$ /en/estrie/$2
+#gim
+RedirectMatch 302 ^(\/gim|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/gim)\/?(.*)$ /fr/gim/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/gim\/?(.*)$ /en/gim/$2
+#granby
+RedirectMatch 302 ^(\/granby|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/granby)\/?(.*)$ /fr/granby/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/granby\/?(.*)$ /en/granby/$2
+#lanaudiere
+RedirectMatch 302 ^(\/lanaudiere|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/lanaudiere)\/?(.*)$ /fr/lanaudiere/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/lanaudiere\/?(.*)$ /en/lanaudiere/$2
+#hautrichelieu
+RedirectMatch 302 ^(\/hautrichelieu|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/hautrichelieu)\/?(.*)$ /fr/hautrichelieu/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/hautrichelieu\/?(.*)$ /en/hautrichelieu/$2
+#rivesud
+RedirectMatch 302 ^(\/rivesud|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/rivesud)\/?(.*)$ /fr/rivesud/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/rivesud\/?(.*)$ /en/rivesud/$2
+#bassaintlaurent
+RedirectMatch 302 ^(\/bassaintlaurent|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/bassaintlaurent)\/?(.*)$ /fr/bassaintlaurent/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/bassaintlaurent\/?(.*)$ /en/bassaintlaurent/$2
+#sagamiesaguenaylacstjean
+RedirectMatch 302 ^(\/sagamiesaguenaylacstjean|(\/fr)?(\/federationquebecoise)?\/chapters-qc\/sagamiesaguenaylacstjean)\/?(.*)$ /fr/sagamiesaguenaylacstjean/$4
+RedirectMatch 302 ^\/en(\/federationquebecoise)?\/chapters-qc\/sagamiesaguenaylacstjean\/?(.*)$ /en/sagamiesaguenaylacstjean/$2
+#montreal
+RedirectMatch 302 ^(\/montreal|(\/en)?(\/federationquebecoise)?\/chapters-qc\/montreal)\/?(.*)$ /en/montreal/$4
+RedirectMatch 302 ^\/fr(\/federationquebecoise)?\/chapters-qc\/montreal\/?(.*)$ /fr/montreal/$2
+#suroit
+RedirectMatch 302 ^(\/suroit|(\/en)?(\/federationquebecoise)?\/chapters-qc\/suroit)\/?(.*)$ /en/suroit/$4
+RedirectMatch 302 ^\/fr(\/federationquebecoise)?\/chapters-qc\/suroit\/?(.*)$ /fr/suroit/$2
+
+RedirectMatch 302 ^[^~]*~\/media\/(.*)$ /sites/default/files/$1
+
+Redirect 302 /About-dementia /en/home/About-dementia
+Redirect 302 /en/About-dementia /en/home/About-dementia
+Redirect 302 /fr/About-dementia /fr/home/About-dementia
+Redirect 302 /Living-with-dementia /en/home/Living-with-dementia
+Redirect 302 /en/Living-with-dementia /en/home/Living-with-dementia
+Redirect 302 /fr/Living-with-dementia /fr/home/Living-with-dementia
+Redirect 302 /We-can-help /en/home/We-can-help
+Redirect 302 /en/We-can-help /en/home/We-can-help
+Redirect 302 /fr/We-can-help /fr/home/We-can-help
+Redirect 302 /Get-involved /en/home/Get-involved
+Redirect 302 /en/Get-involved /en/home/Get-involved
+Redirect 302 /fr/Get-involved /fr/home/Get-involved
+Redirect 302 /Research /en/home/Research
+Redirect 302 /en/Research /en/home/Research
+Redirect 302 /fr/Research /fr/home/Research
+Redirect 302 /News-and-Events /en/home/News-and-Events
+Redirect 302 /en/News-and-Events /en/home/News-and-Events
+Redirect 302 /fr/News-and-Events /fr/home/News-and-Events
+Redirect 302 /About-us /en/home/About-us
+Redirect 302 /en/About-us /en/home/About-us
+Redirect 302 /fr/About-us /fr/home/About-us
+Redirect 302 /Accessibility /en/home/Accessibility
+Redirect 302 /en/Accessibility /en/home/Accessibility
+Redirect 302 /fr/Accessibility /fr/home/Accessibility
+Redirect 302 /ContactUs /en/home/ContactUs
+Redirect 302 /en/ContactUs /en/home/ContactUs
+Redirect 302 /fr/ContactUs /fr/home/ContactUs
+Redirect 302 /About-this-site /en/home/About-this-site
+Redirect 302 /en/About-this-site /en/home/About-this-site
+Redirect 302 /fr/About-this-site /fr/home/About-this-site
+Redirect 302 /Privacy /en/home/Privacy
+Redirect 302 /en/Privacy /en/home/Privacy
+Redirect 302 /fr/Privacy /fr/home/Privacy
+Redirect 302 /Legacy /en/Home/Get-involved/Ways-to-donate/Gift-in-your-Will
+Redirect 302 /Heritage /fr/Home/Get-involved/Ways-to-donate/Gift-in-your-Will
+
+#
+# Apache/PHP/Drupal settings:
+#
+
+# Protect files and directories from prying eyes.
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+  </IfModule>
+</FilesMatch>
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+# Set the default handler.
+DirectoryIndex index.php index.html index.htm
+
+# Add correct encoding for SVGZ.
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+# Most of the following PHP settings cannot be changed at runtime. See
+# sites/default/default.settings.php and
+# Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
+# changed at runtime.
+
+# PHP 5, Apache 1 and 2.
+<IfModule mod_php5.c>
+  php_value assert.active                   0
+  php_flag session.auto_start               off
+  php_value mbstring.http_input             pass
+  php_value mbstring.http_output            pass
+  php_flag mbstring.encoding_translation    off
+  # PHP 5.6 has deprecated $HTTP_RAW_POST_DATA and produces warnings if this is
+  # not set.
+  php_value always_populate_raw_post_data   -1
+</IfModule>
+
+# Requires mod_expires to be enabled.
+<IfModule mod_expires.c>
+  # Enable expirations.
+  ExpiresActive On
+
+  # Cache all files for 2 weeks after access (A).
+  ExpiresDefault A1209600
+
+  <FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior. This may
+    # fail if an error occurs early in the bootstrap process, and it may cause
+    # problems if a non-Drupal PHP file is installed in a subdirectory.
+    ExpiresActive Off
+  </FilesMatch>
+</IfModule>
+
+# Set a fallback resource if mod_rewrite is not enabled. This allows Drupal to
+# work without clean URLs. This requires Apache version >= 2.2.16. If Drupal is
+# not accessed by the top level URL (i.e.: http://example.com/drupal/ instead of
+# http://example.com/), the path to index.php will need to be adjusted.
+<IfModule !mod_rewrite.c>
+  FallbackResource /index.php
+</IfModule>
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^en$ /en/Home [R=302,L]
+  RewriteRule ^fr$ /fr/Home [R=302,L]
+
+  # Needs the following in the virtualhost config: 
+  #   RewriteMap lc int:tolower
+  RewriteCond %{REQUEST_URI} [A-Z]
+  RewriteRule ^sites/default/files/Images/(.*)$ sites/default/files/images/${lc:$1} [L,NC]
+  RewriteRule ^sites/default/files/Files/(.*)$ sites/default/files/files/${lc:$1} [L,NC]
+
+
+  # Set "protossl" to "s" if we were accessed via https://.  This is used later
+  # if you enable "www." stripping or enforcement, in order to ensure that
+  # you don't bounce between http and https.
+  RewriteRule ^ - [E=protossl]
+  RewriteCond %{HTTPS} on
+  RewriteRule ^ - [E=protossl:s]
+
+  # Make sure Authorization HTTP header is available to PHP
+  # even when running as CGI or FastCGI.
+  RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Block access to "hidden" directories whose names begin with a period. This
+  # includes directories used by version control systems such as Subversion or
+  # Git to store control files. Files whose names begin with a period, as well
+  # as the control files used by CVS, are protected by the FilesMatch directive
+  # above.
+  #
+  # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
+  # not possible to block access to entire directories from .htaccess because
+  # <DirectoryMatch> is not allowed here.
+  #
+  # If you do not have mod_rewrite installed, you should remove these
+  # directories from your webroot or otherwise protect them from being
+  # downloaded.
+  RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+  # If your site can be accessed both with and without the 'www.' prefix, you
+  # can use one of the following settings to redirect users to your preferred
+  # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+  #
+  # To redirect all users to access the site WITH the 'www.' prefix,
+  # (http://example.com/foo will be redirected to http://www.example.com/foo)
+  # uncomment the following:
+  RewriteCond %{HTTP_HOST} .
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  #
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/foo will be redirected to http://example.com/foo)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /drupal
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+
+  # Redirect common PHP files to their new locations.
+  RewriteCond %{REQUEST_URI} ^(.*)?/(install.php) [OR]
+  RewriteCond %{REQUEST_URI} ^(.*)?/(rebuild.php)
+  RewriteCond %{REQUEST_URI} !core
+  RewriteRule ^ %1/core/%2 [L,QSA,R=301]
+
+  # Rewrite install.php during installation to see if mod_rewrite is working
+  RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
+
+  # Pass all requests not referring directly to files in the filesystem to
+  # index.php.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  # For security reasons, deny access to other PHP files on public sites.
+  # Note: The following URI conditions are not anchored at the start (^),
+  # because Drupal may be located in a subdirectory. To further improve
+  # security, you can replace '!/' with '!^/'.
+  # Allow access to PHP files in /core (like authorize.php or install.php):
+  RewriteCond %{REQUEST_URI} !/core/[^/]*\.php$
+  # Allow access to test-specific PHP files:
+  RewriteCond %{REQUEST_URI} !/core/modules/system/tests/https?.php
+  # Allow access to Statistics module's custom front controller.
+  # Copy and adapt this rule to directly execute PHP files in contributed or
+  # custom modules or to run another PHP application in the same directory.
+  RewriteCond %{REQUEST_URI} !/core/modules/statistics/statistics.php$
+  # Deny access to any other PHP files that do not match the rules above.
+  # Specifically, disallow autoload.php from being served directly.
+  RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]
+
+  # Rules to correctly serve gzip compressed CSS and JS files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+# Various header fixes.
+<IfModule mod_headers.c>
+  # Disable content sniffing, since it's an attack vector.
+  Header always set X-Content-Type-Options nosniff
+  # Disable Proxy header, since it's an attack vector.
+  RequestHeader unset Proxy
+</IfModule>

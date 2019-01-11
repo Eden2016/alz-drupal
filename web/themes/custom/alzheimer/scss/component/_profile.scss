@@ -1,0 +1,40 @@
+article.compact {
+  @include clearfix;
+  margin-bottom: 20px;
+
+  .field {
+    display: inline;
+  }
+  
+  .field--name-field-first-name, .field--name-field-last-name {
+    font-weight: 600;
+  }
+
+  .field--name-user-picture {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .field--name-field-job-title::before {
+      content:' ';
+      display: block;
+      height: 0;
+  }
+
+  .field--name-field-job-title::after {
+    content: ' @';
+  }
+}
+
+.picture_name {
+    font-weight: 600;
+    
+    .field--name-user-picture {
+      margin-right: 10px;
+    }
+    
+    .field {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }

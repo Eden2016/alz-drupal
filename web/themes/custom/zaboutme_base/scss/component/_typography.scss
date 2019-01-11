@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-Jul-2017, 9:46:24 AM
+    Author     : tricorp
+*/
+
+body {
+  font-family: $font-default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-oswald;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,152 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+    node.field_article_layout.value == '1' ? 'col-lg-8',
+    node.field_article_layout.value == '2' ? 'wide inner-content',
+    node.field_article_layout.value == '3' ? 'col-lg-9',
+    node.field_article_layout.value == '2' and node.field_include_donate.value != '1' ? 'without-button'
+  ]
+%}
+
+<div id="utility">
+        <div class="utilityContainer">
+            <a href="?p=1" target=_blank class="print" style="float:left;margin:0px;padding-right:2px;">
+                <span class="offscreen">
+                  <label ID="titlePrint">Print</label>
+                </span>
+                <img src="/themes/custom/alzheimer/images/printButton.png" alt="" width="20" height="20"/>
+            </a>    <!-- todo: Hook up this link -->
+
+              <div class="addthis_toolbox addthis_default_style addthis_20x20_style" style="display:inline-block;width:120px;">
+                    <a class="addthis_button_preferred_1"></a>
+                    <a class="addthis_button_preferred_2"></a>
+                    <a class="addthis_button_preferred_3"></a>
+                    <a class="addthis_button_preferred_4"></a>
+                    <a class="addthis_button_more"></a>
+                </div>
+
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ec51d9029d96f6c"></script>
+                {% if node.langcode != "en" %}
+                <script type="text/javascript">
+                    var addthis_config = 
+                    {
+                        ui_language: "fr",
+                        services_exclude: "print,printfriendly,cleanprint"
+                    }
+                </script>
+                {%  else %}
+                <script type="text/javascript">
+                    var addthis_config =
+                    {
+                        services_exclude: "print,printfriendly,cleanprint"
+                    }
+                </script>
+                {% endif %}
+            <!-- AddThis END -->
+        </div>
+    </div>
+            
+<article{{ attributes.addClass(classes) }} id="article">
+  {{ content.field_media_image }}
+  {{ node.field_temp_video.value|raw }}
+
+  {{ title_prefix }}
+  {% if node.field_hide_title.value != 1 %}
+    <h1 class="black">{{ label['#object'].getTitle()|raw }}</a></h1>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('author') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('content') }}>
+    {{ content|without('field_media_image','field_temp_video') }}
+    <br />
+    {{ 'Last Updated'|t }}: {{ node.getChangedTime()|date("m/d/Y") }}
+    <div id="twocolumn_0_leftcolumn_0_pnlBackToTop" class="pnlBackToTop">
+        <p class="right">
+            <a href="#navigation">
+                {{ 'Back to top'|t }}↑
+            </a>
+        </p>
+    </div>
+  </div>
+
+</article>

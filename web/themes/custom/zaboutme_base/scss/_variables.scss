@@ -1,0 +1,13 @@
+$dark       : #333;
+$font-color: #333;
+$font-light : #ccc; 
+$font-disabled : #ccc; 
+$border-color:  #D0D0D0;
+$border-thin: solid 1px $border-color;
+
+$mobile:          "screen and (min-width: #{$screen-xs-min})";
+$tablet:          "screen and (min-width: #{$screen-sm-min})";
+$normal:          "screen and (min-width: #{$screen-md-min})";
+$wide:            "screen and (min-width: #{$screen-lg-min})";
+$grid-breakpoint: "screen and (min-width: #{$grid-float-breakpoint})";
+

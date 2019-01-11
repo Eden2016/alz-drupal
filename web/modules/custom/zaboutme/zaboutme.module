@@ -1,0 +1,50 @@
+<?php
+use Drupal\zaboutme\SqlServer;
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ */
+function zaboutme_form_node_form_alter(&$form, $form_state) {
+
+}
+
+function zaboutme_node_links_alter(array &$links, $entity, array &$context)
+{
+  if ($context['view_mode'] == 'teaser') {
+    $body = $entity->get('body')->getValue();
+    if (empty($body[0]['value']))
+    {
+      unset($links['node']['#links']['node-readmore']);
+    }
+  }
+}
+
+function zaboutme_user_login($account) 
+{
+    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+
+    $db = \Drupal\Core\Database\Database::getConnection();
+    $sql = "SELECT * from group_content_field_data where entity_id=? and type in ( ?, ?)";
+    $result = $db->query($sql, [$user->get('uid')->value, 'chapter-group_membership', 'provincial-group_membership'])->fetchObject();
+
+    if($result->gid) {
+        $chapter = \Drupal::entityTypeManager()->getStorage("group")->load($result->gid);
+        $url = "/".$chapter->label->value;
+        $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+        $response->send();
+    }
+
+    return;
+}
+
+/**
+ * Preprocesses the variables for sitemap.html.twig.
+ *
+ * @see sitemap.html.twig
+ */
+function zaboutme_preprocess_sitemap(array &$variables) {
+  $path = explode('/', Url::fromRoute('<current>')->toString());
+  $variables['sitemap_items'] = ['menu' => _sitemap_menus(strtolower($path[2]))];
+}

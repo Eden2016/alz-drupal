@@ -1,0 +1,46 @@
+.comments {
+  background-color: #eee;
+  padding: 20px;
+  margin: 0 -20px;
+  
+  > article {
+    border-top: solid 1px #ccc;
+    padding-top: 15px;
+    margin-top: 15px;
+    
+    &:first-child {
+      border-top-width: 0;
+    }
+  }
+  
+  .indented {
+    padding-left: 30px;
+    margin-left: 13px;
+    border-left: solid 2px #ccc;
+  }
+  
+  .js-comment {
+    > div {
+      margin-left: 45px;
+    }
+    
+    > footer {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.comment-comment-form {
+  .field--name-comment-body {
+    label {
+      display: none;
+    }
+  }
+}
+
+li.comment-add a:before {
+  content: '\e111';
+  font-family: 'Glyphicons Halflings';
+  margin-right: 5px;
+  vertical-align: middle;
+}

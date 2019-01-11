@@ -1,0 +1,64 @@
+/**
+ * Node styling.
+ */
+
+.node-preview-container {
+  margin-top: -($grid-gutter-width / 2);
+}
+
+.node-preview-form-select {
+  padding: ($grid-gutter-width / 2);
+}
+
+/**
+ * Links
+ */
+
+article {
+  .field--name-body {
+    margin: 15px 0;
+    padding-bottom: 15px;
+  }
+  .flag {
+    float: right;
+    margin-left: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+    a {
+      color: $font-color;
+    }
+  }
+  
+  .links {
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+    
+    a {
+      color: $font-color;
+      margin-right: 10px;
+    }
+  }
+
+  footer {
+    margin-bottom: 15px;
+  }
+}
+
+.flag-bookmark {
+  a:before {
+    content: '\e044';
+    font-family: 'Glyphicons Halflings';
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}
+
+.node-readmore {
+  a:before {
+    content: '\e095';
+    font-family: 'Glyphicons Halflings';
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+
+function zaboutme_base_preprocess_node(&$variables) {
+  //use a different view mode for comments
+}
+
+/**
+ * Implements of hook_preprocess_node__CONTENT_TYPE()
+ * 
+ */
+function zaboutme_base_preprocess_node__resource(&$variables) {
+  //remove read more link from teaser node if there is no body content
+  if ($variables['view_mode'] == 'teaser')
+  {
+    $body = $variables['node']->body->getValue();
+    //if (empty($body[0]['value'])) unset($variables['content']['_field_layout']['content']['links']);
+  }
+}
+
+/**
+ * Implements of hook_preprocess_comment()
+ * 
+ */
+function zaboutme_base_preprocess_comment(&$variables) {
+  //use a different view mode for comments
+  $variables['user_picture']['#view_mode'] = 'picture_name';
+}
